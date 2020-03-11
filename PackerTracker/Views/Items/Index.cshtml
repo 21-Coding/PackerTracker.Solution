@@ -2,15 +2,21 @@
 
 <h1>Current Inventory: </h1>
 
-@if (Model.Count == 0)
-{
-  <p>There are no cars on the lot</p>
-}
-<ul>
-  @foreach (CampingItems item in Model)
+  @if (Model.Count == 0)
   {
-   <li><a href="/@item.Id"> @item.Item </a></li>
-
+    <p>There are no items in your packing list!</p>
   }
-</ul>
-<a href="/items">Add a new camping item!</a>
+  @foreach (CampingItems item in Model)
+  { 
+    if (@item.Packed == true)
+    {
+      <input type="checkbox" checked="checked" name="@item.Item"><a href="/items/@item.Id"> @item.Item </a>
+    }
+    else
+    {
+      <input type="checkbox" name="@item.Item"><a href="/items/@item.Id"> @item.Item </a>
+    }
+<br>
+}
+<br>
+<a href="/items/new">Add a new camping item!</a>

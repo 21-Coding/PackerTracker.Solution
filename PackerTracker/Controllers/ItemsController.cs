@@ -24,8 +24,8 @@ namespace PackerTracker.Controllers
       [HttpPost("/items")]
       public ActionResult Create(string item, int price, int weight, bool packed, string name)
       {
-          CampingItems myItem = new CampingItems(item, price, weight, packed, name);
-          return RedirectToAction("Index");
+        CampingItems myItem = new CampingItems(item, price, weight, packed, name);
+        return RedirectToAction("Index");
       }
 
 

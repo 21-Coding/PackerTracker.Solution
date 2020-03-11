@@ -1,6 +1,12 @@
 @using PackerTracker.Models;
 
-<h1>Current Inventory: </h1>
+<h1>@Model.Item</h1>
 
+<ul>
+    <li>Cost of item: @Model.Price</li>
+    <li>Weight of item: @Model.Weight</li>
+    <li>Packed status: @Model.Packed</li>
+    <li>Who is bringing it: @Model.Name</li>
+</ul>
 
-<a href="/items">Add a new camping item!</a>
+<button><a href="/items">Go back to list of items.</a></button>

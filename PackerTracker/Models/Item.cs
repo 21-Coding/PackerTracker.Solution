@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace PackerTracker.Models
 {
@@ -50,6 +51,7 @@ namespace PackerTracker.Models
 
     public static CampingItems Find(int searchId)
     {
+      Console.WriteLine(_instances[searchId - 1]);
       return _instances[searchId - 1];
     }
 
