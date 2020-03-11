@@ -13,6 +13,10 @@ namespace PackerTracker.Models
     
 
     private static List<CampingItems> _instances = new List<CampingItems> {};
+    
+
+
+
     private static List<CampingItems> _unpackedItems = new List<CampingItems> {};
 
 
