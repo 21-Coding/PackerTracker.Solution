@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>New Items:</title>
-  </head>
-  <body>
+@{
+  Layout = "_Layout";
+}
     <form action="/items" method="post">
       <label for="item">Add a new item</label>
       <input id="item" name="item" type="text">
@@ -17,5 +14,3 @@
       <input id="packed" name="packed" type="text">
       <button type="submit">ADD</button>
     </form>
-  </body>
-</html>
